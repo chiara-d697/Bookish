@@ -1,12 +1,14 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Bookish.Models;
+using Bookish.Services;
 
 namespace Bookish.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private BookService _bookService = new BookService();
 
     public HomeController(ILogger<HomeController> logger)
     {
@@ -21,6 +23,12 @@ public class HomeController : Controller
     public IActionResult Privacy()
     {
         return View();
+    }
+
+    public IActionResult BookList()
+    { 
+        var books = _bookService.GetAllBooks();
+        return View(books);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
