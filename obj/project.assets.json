@@ -1823,19 +1823,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\chidin\\.nuget\\packages\\": {}
+    "C:\\Users\\linbal\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Training\\Bookish\\Bookish.csproj",
+      "projectUniqueName": "c:\\Teamwork\\Bookish\\Bookish.csproj",
       "projectName": "Bookish",
-      "projectPath": "C:\\Training\\Bookish\\Bookish.csproj",
-      "packagesPath": "C:\\Users\\chidin\\.nuget\\packages\\",
-      "outputPath": "C:\\Training\\Bookish\\obj\\",
+      "projectPath": "c:\\Teamwork\\Bookish\\Bookish.csproj",
+      "packagesPath": "C:\\Users\\linbal\\.nuget\\packages\\",
+      "outputPath": "c:\\Teamwork\\Bookish\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\chidin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\linbal\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"

@@ -6,15 +6,25 @@ Book_ID int ,
 Author_ID int 
 );
 
+
+delete from AuthorDbModelBookDbModel;
+
 INSERT INTO AuthorDbModelBookDbModel(AuthorsID, BooksId)
 VALUES
 	(2, 1),
 	(1, 2),
 	(1, 3);
 
-INSERT INTO  AuthorDbModelBookDbModel(AuthorsID, BooksId)
+	
+INSERT INTO AuthorDbModelBookDbModel(AuthorsID, BooksId)
 VALUES
-	(1, 1);
+	(3, 4),
+	(4, 4);
+
+	commit;
+
+select * from AuthorDbModelBookDbModel;
+select * from authors;
 
 SELECT * from Book_Author;
 
