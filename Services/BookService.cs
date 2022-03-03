@@ -20,7 +20,7 @@ namespace Bookish.Services
                     dbBook.Isbn,
                     dbBook.Title,
                     dbBook.Genre, 
-                    dbBook.Authors,
+                    dbBook.Authors.Select(a => new Author(a.AuthorName)).ToList(),
                     dbBook.YearOfPublication,
                     dbBook.CoverPhotoUrl
                 ));

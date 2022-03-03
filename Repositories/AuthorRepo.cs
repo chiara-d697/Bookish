@@ -10,12 +10,12 @@ namespace Bookish.Repositories
             {
                 new AuthorDbModel
                 {
-                    AuthorId = 1,
+                    Id = 1,
                     AuthorName = "J. K. Rowling"
                 },
                 new AuthorDbModel
                 {
-                    AuthorId = 2,
+                    Id = 2,
                     AuthorName = "J. R. R. Tolkien"
                 }
             };

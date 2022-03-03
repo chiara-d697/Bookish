@@ -9,7 +9,12 @@
         {
             <li style="list-style-type:none">
                 <h2>@book.Title</h2>
-                <h4>@book.Authors[0].AuthorName</h4>
+
+                @foreach (Author author in book.Authors)
+                {
+                    <h4>@author.AuthorName</h4>
+                }
+
                 <img width="200" src="@book.CoverPhotoUrl" alt="@book.Title" />
                 <p>@book.Isbn</p>
             </li>

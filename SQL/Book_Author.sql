@@ -6,11 +6,15 @@ Book_ID int ,
 Author_ID int 
 );
 
-INSERT INTO Book_Author(Book_ID, Author_ID)
+INSERT INTO AuthorDbModelBookDbModel(AuthorsID, BooksId)
 VALUES
-	(1, 2),
 	(2, 1),
-	(3, 1);
+	(1, 2),
+	(1, 3);
+
+INSERT INTO  AuthorDbModelBookDbModel(AuthorsID, BooksId)
+VALUES
+	(1, 1);
 
 SELECT * from Book_Author;
 
