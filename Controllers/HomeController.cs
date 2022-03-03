@@ -9,6 +9,7 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
     private BookService _bookService = new BookService();
+    private AuthorService _authorService = new AuthorService();
 
     public HomeController(ILogger<HomeController> logger)
     {
@@ -29,6 +30,12 @@ public class HomeController : Controller
     { 
         var books = _bookService.GetAllBooks();
         return View(books);
+    }
+
+    public IActionResult AuthorList()
+    { 
+        var authors = _authorService.GetAllAuthors();
+        return View(authors);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

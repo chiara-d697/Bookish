@@ -1,6 +1,5 @@
 using Bookish.Repositories;
 using Bookish.Models;
-using System.Collections;
 
 namespace Bookish.Services
 {
@@ -20,7 +19,7 @@ namespace Bookish.Services
                     dbBook.Isbn,
                     dbBook.Title,
                     dbBook.Genre, 
-                    dbBook.Authors.Select(a => new Author(a.AuthorName)).ToList(),
+                    dbBook.Authors.Select(a => new Author(a.AuthorName, a.AuthorPhotoUrl)).ToList(),
                     dbBook.YearOfPublication,
                     dbBook.CoverPhotoUrl
                 ));

@@ -5,9 +5,13 @@ Author_ID INTEGER PRIMARY KEY identity,
 Author_Name varchar(100)
 );
 
-INSERT INTO Author(Author_Name)
+INSERT INTO Authors(AuthorName)
 VALUES
 	('J. K. Rowling'),
 	('J. R. R. Tolkien');
 
-SELECT * from Author;
+SELECT * from Authors;
+
+SELECT * FROM AuthorDbModelBookDbModel;
+
+DELETE FROM AuthorDbModelBookDbModel WHERE AuthorsId = 1 AND BooksId = 1;

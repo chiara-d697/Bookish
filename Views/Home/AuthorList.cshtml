@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "Author Directory";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Authors</h1>
+    <ul>
+        @foreach (Author author in Model)
+        {
+            <li style="list-style-type:none">
+                <h2>@author.AuthorName</h2>
+                <p>@author.AuthorPhotoUrl</p>
+                <img width="400" height="400" src="@author.AuthorPhotoUrl" alt="@author.AuthorName" />
+            </li>
+        }
+    </ul>
+</div>
