@@ -1,18 +1,21 @@
 using Bookish.Models.Database;
-using Bookish.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Bookish.Repositories
 {
-    public class BookRepo
+    public interface IAuthorRepo
+    {
+        public List<AuthorDbModel> GetAllAuthors();
+    }
+    
+    public class AuthorRepo : IAuthorRepo
     {
         private BookishContext context = new BookishContext();
 
-        public List<BookDbModel> GetAllBooks()
+        public List<AuthorDbModel> GetAllAuthors()
         {
             return context
-                .Books
-                .Include(b => b.Authors)
+                .Authors
                 .ToList();
         }
     }

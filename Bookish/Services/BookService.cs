@@ -3,9 +3,20 @@ using Bookish.Models;
 
 namespace Bookish.Services
 {
-    public class BookService
+    public interface IBookService
     {
-        private BookRepo _books = new BookRepo();
+        public List<Book> GetAllBooks();
+    }
+    
+    
+    public class BookService : IBookService
+    {
+        private IBookRepo _books;
+        
+        public BookService(IBookRepo books)
+        {
+            _books = books;
+        }
 
         public List<Book> GetAllBooks()
         {
